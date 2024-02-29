@@ -66,9 +66,15 @@ const config: Config = {
       items: [
         {
           type: "docSidebar",
-          sidebarId: "tutorialSidebar",
+          sidebarId: "dev",
           position: "left",
-          label: "Tutorial",
+          label: "Dev Notes",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "others",
+          position: "left",
+          label: "Others",
         },
         { to: "/blog", label: "Blog", position: "left" },
         {
