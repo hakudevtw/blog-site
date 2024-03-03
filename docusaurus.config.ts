@@ -1,6 +1,7 @@
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
+import tailwindPlugin from "./plugins/tailwind.plugin";
 
 const config: Config = {
   title: "Haku's Notebook",
@@ -18,25 +19,14 @@ const config: Config = {
   organizationName: "facebook", // Usually your GitHub org/user name.
   projectName: "docusaurus", // Usually your repo name.
 
-  plugins: [
-    async function myPlugin() {
-      return {
-        name: "docusaurus-tailwindcss",
-        configurePostCss(postcssOptions) {
-          postcssOptions.plugins.push(require("tailwindcss"));
-          postcssOptions.plugins.push(require("autoprefixer"));
-          return postcssOptions;
-        },
-      };
-    },
-  ],
+  plugins: [tailwindPlugin],
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
 
   i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
+    defaultLocale: "zh-TW",
+    locales: ["en", "zh-TW", "ja"],
   },
 
   presets: [
@@ -61,12 +51,16 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
+    docs: {
+      sidebar: { hideable: true },
+    },
     navbar: {
       title: "Haku's Notebook",
       logo: {
         alt: "My Site Logo",
         src: "img/logo.png",
       },
+      hideOnScroll: true,
       items: [
         {
           type: "docSidebar",
@@ -81,6 +75,10 @@ const config: Config = {
           label: "Others",
         },
         { to: "/blog", label: "Blog", position: "left" },
+        // {
+        //   type: "localeDropdown",
+        //   position: "right",
+        // },
         {
           href: "https://github.com/hakudevtw",
           position: "right",
