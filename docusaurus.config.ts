@@ -8,11 +8,13 @@ const config: Config = {
   tagline: "Haku's daily notes...",
   favicon: "img/favicon.ico",
 
-  url: "https://hakudevtw.github.io/blog-site/",
+  // Set the production url of your site here
+  url: "https://hakudevtw.github.io",
   baseUrl: "/blog-site/",
 
   organizationName: "hakudevtw",
   projectName: "blog-site",
+  trailingSlash: false,
 
   plugins: [tailwindPlugin],
 
