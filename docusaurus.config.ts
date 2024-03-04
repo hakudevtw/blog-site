@@ -3,6 +3,8 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 import tailwindPlugin from "./plugins/tailwind.plugin";
 
+const isDev = process.env.NODE_ENV === "development";
+
 const config: Config = {
   title: "Haku's Notebook",
   tagline: "Haku's daily notes...",
@@ -92,6 +94,13 @@ const config: Config = {
     footer: {
       style: "dark",
       copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+    },
+    algolia: {
+      // TODO 替換成自己的 id
+      appId: "R2IYF7ETH7",
+      apiKey: "599cec31baffa4868cae4e79f180729b",
+      indexName: "docsearch",
+      searchParameters: {},
     },
     prism: {
       theme: prismThemes.github,

@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { default as DocusaurusLayout } from "@theme/Layout";
+import Head from "@docusaurus/Head";
 
 // Copied from theme-classic.d.ts
 interface Props {
@@ -15,6 +16,10 @@ interface Props {
 export default function Layout({ children, ...props }: Props) {
   return (
     <DocusaurusLayout {...props}>
+      <Head>
+        // TODO 替換成自己的 id
+        <link rel="preconnect" href="https://YOUR_APP_ID-dsn.algolia.net" crossOrigin="anonymous" />
+      </Head>
       <main className="container py-4">{children}</main>
     </DocusaurusLayout>
   );
