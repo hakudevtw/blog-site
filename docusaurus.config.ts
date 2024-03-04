@@ -8,7 +8,6 @@ const config: Config = {
   tagline: "Haku's daily notes...",
   favicon: "img/favicon.ico",
 
-  // Set the production url of your site here
   url: "https://hakudevtw.github.io",
   baseUrl: "/blog-site/",
 
