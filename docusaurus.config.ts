@@ -32,10 +32,15 @@ const config: Config = {
         docs: {
           sidebarPath: "./sidebars.ts",
           editUrl: "https://github.com/hakudevtw/blog-site/tree/main/",
+          remarkPlugins: [[require("@docusaurus/remark-plugin-npm2yarn"), { sync: true }]],
         },
+        pages: { remarkPlugins: [require("@docusaurus/remark-plugin-npm2yarn")] },
         blog: {
           showReadingTime: true,
           editUrl: "https://github.com/hakudevtw/blog-site/tree/main/",
+          remarkPlugins: [
+            [require("@docusaurus/remark-plugin-npm2yarn"), { converters: ["pnpm"] }],
+          ],
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -44,6 +49,7 @@ const config: Config = {
     ],
   ],
 
+  themes: ["@docusaurus/theme-live-codeblock"],
   themeConfig: {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
@@ -90,6 +96,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ["bash"],
     },
   } satisfies Preset.ThemeConfig,
 };
