@@ -32,6 +32,7 @@ const config: Config = {
       "classic",
       {
         docs: {
+          showLastUpdateTime: true,
           sidebarPath: "./sidebars.ts",
           editUrl: "https://github.com/hakudevtw/blog-site/tree/main/",
           remarkPlugins: [[require("@docusaurus/remark-plugin-npm2yarn"), { sync: true }]],
