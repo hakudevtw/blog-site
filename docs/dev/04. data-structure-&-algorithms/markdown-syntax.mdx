@@ -1,0 +1,63 @@
+---
+title: Markdown Syntax
+# description: A short description of this page
+# image: a thumbnail image to be shown in social media cards
+# keywords: [keywords, describing, the main topics]
+---
+
+### Live Code Block
+
+```jsx live
+function Clock(props) {
+  const [count, setCount] = useState(0);
+  const add = () => setCount((c) => c + 1);
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={add}>Add</button>
+    </div>
+  );
+}
+```
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+### Admonitions
+
+:::note[Custom Title]
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+:::
+
+:::tip[With MDX]
+
+<Tabs>
+  <TabItem value="apple" label="Apple">
+    This is an apple 🍎
+  </TabItem>
+  <TabItem value="orange" label="Orange">
+    This is an orange 🍊
+  </TabItem>
+  <TabItem value="banana" label="Banana">
+    This is a banana 🍌
+  </TabItem>
+</Tabs>
+:::
+
+:::info
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+:::
+
+:::warning
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+:::
+
+:::danger
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+:::
+
+### Multiple CLI Tabs
+
+```bash npm2yarn
+npm install @docusaurus/remark-plugin-npm2yarn
+```

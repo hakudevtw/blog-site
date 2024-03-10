@@ -1,11 +1,11 @@
 import BlogPostItem from "@theme-original/BlogPostItem";
-import Giscus from "@site/src/components/giscus";
+import CommentSection from "@site/src/components/comment-section";
 
 export default function BlogPostItemWrapper(props) {
   return (
     <>
       <BlogPostItem {...props} />
-      <Giscus />
+      <CommentSection />
     </>
   );
 }

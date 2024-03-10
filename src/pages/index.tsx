@@ -8,7 +8,7 @@ export default function Home(): JSX.Element {
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />"
     >
-      <p>Main Page</p>
+      <p className="text-red-100 dark:text-blue-100">Main Page</p>
     </Layout>
   );
 }
