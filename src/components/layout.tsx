@@ -17,8 +17,11 @@ export default function Layout({ children, ...props }: Props) {
   return (
     <DocusaurusLayout {...props}>
       <Head>
-        // TODO 替換成自己的 id
-        <link rel="preconnect" href="https://YOUR_APP_ID-dsn.algolia.net" crossOrigin="anonymous" />
+        <link
+          rel="preconnect"
+          href={`https://C74ZUN28PL-dsn.algolia.net`}
+          crossOrigin="anonymous"
+        />
       </Head>
       <main className="container py-4">{children}</main>
     </DocusaurusLayout>

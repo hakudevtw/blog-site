@@ -3,8 +3,6 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 import tailwindPlugin from "./plugins/tailwind.plugin";
 
-const isDev = process.env.NODE_ENV === "development";
-
 const config: Config = {
   title: "Haku's Notebook",
   tagline: "Haku's daily notes...",
@@ -57,7 +55,7 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     docs: {
-      sidebar: { hideable: true },
+      sidebar: { hideable: true, autoCollapseCategories: true },
     },
     navbar: {
       title: "Haku's Notebook",
@@ -71,7 +69,7 @@ const config: Config = {
           type: "docSidebar",
           sidebarId: "dev",
           position: "left",
-          label: "Dev Notes",
+          label: "Dev",
         },
         {
           type: "docSidebar",
@@ -97,10 +95,9 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },
     algolia: {
-      // TODO 替換成自己的 id
-      appId: "R2IYF7ETH7",
-      apiKey: "599cec31baffa4868cae4e79f180729b",
-      indexName: "docsearch",
+      appId: "C74ZUN28PL",
+      apiKey: "335c0f36e083f10627dc948dc88a4c00",
+      indexName: "hakudevtwio",
       searchParameters: {},
     },
     prism: {
